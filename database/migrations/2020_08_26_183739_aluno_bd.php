@@ -14,6 +14,8 @@ class AlunoBd extends Migration
             $table->integer("matricula")->unique()->nullable(false);
             $table->enum("situacao", ['ativo', 'inativo'])->default('inativo')->nullable(false);
             $table->string("endereco", 255)->nullable(false);
+            $table->char("curso_id", 36); 
+            $table->foreign("curso_id")->references("id")->on("curso")->onDelete("cascade");
         });
     }
 

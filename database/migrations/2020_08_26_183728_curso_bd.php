@@ -11,8 +11,6 @@ class CursoBd extends Migration
         Schema::create("curso", function (Blueprint $table) {
             $table->char("id", 36)->primary();
             $table->string("nome", 100)->unique()->nullable(false);
-            $table->char("aluno_id", 36); 
-            $table->foreign("aluno_id")->references("id")->on("aluno")->onDelete("cascade");
         });
     }
 
