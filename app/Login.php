@@ -8,9 +8,5 @@ class Login extends Model
 {
     public $timestamps = false; 
     protected $table = "login"; 
-    protected $fillable = ["email", "senha", "aluno_id"];
-
-    public function aluno(){
-        return $this->belongsTo(Aluno::class); 
-    }
+    protected $fillable = ["id", "email", "senha"];
 }

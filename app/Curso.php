@@ -9,5 +9,4 @@ class Curso extends Model
     public $timestamps = false; 
     protected $table = "curso"; 
     protected $fillable = ["id", "nome"];
-    
 }
