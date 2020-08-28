@@ -31,8 +31,12 @@
                     <label> Curso : </label>
                     <input type="text" name="nome" class="form-control" placeholder="Curso" />
                 </div>
+                <div class="form-group col-3">
+                    <br/>
+                    <button type="submit" class="btn btn-primary"> Salvar </button>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary"> Salvar </button>
         </form>
+        <a href="/importar"> Importar XML </a>
     </body>
 </html>

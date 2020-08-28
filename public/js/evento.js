@@ -18,4 +18,18 @@ $(document).ready(function(){
         });
     });
 
+    $('#alterar').click(function () {
+        if (!confirm('Deseja realmente alterar os dados do aluno ?')) {
+            return false;
+        }
+        return true;
+    });
+
+    $('#remover').click(function () {
+        if (!confirm('Deseja realmente remover esse aluno ?')) {
+            return false;
+        }
+        return true;
+    });
+
 });

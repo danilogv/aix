@@ -8,11 +8,23 @@
     </head>
     <body>
         <form action="/login" method="post">
+            @csrf
             <nav class="navbar navbar-expand-md navbar-dark bg-primary">
                 <a class="navbar-brand" href="/">
                     <img src="{{asset('images/logotipo.png')}}" width="90" height="60">
                 </a>
             </nav>
+            <br/>
+            @if (session("erro"))
+                <div class="alert alert-danger">
+                    {{ session("erro") }}
+                </div>
+            @endif
+            @if (session("sucesso"))
+                <div class="alert alert-success">
+                    {{ session("sucesso") }}
+                </div>
+            @endif
             <br/>
             <h2> Login </h2>
             <br/>
@@ -23,7 +35,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-3">
-                    <input type="text" name="senha" class="form-control" placeholder="Senha" />
+                    <input type="password" name="senha" class="form-control" placeholder="Senha" />
                 </div>
             </div>
             <button type="submit" class="btn btn-primary"> Entrar </button>
