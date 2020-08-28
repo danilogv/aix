@@ -15,7 +15,18 @@
                 <img src="{{asset('images/logotipo.png')}}" width="90" height="60">
             </a>
         </nav>
-        <br/> <br/>
+        <br/> 
+        @if (session('sucesso'))
+            <div class="alert alert-success">
+                {{ session('sucesso') }}
+            </div>
+        @endif
+        @if (session("erro"))
+            <div class="alert alert-danger">
+                {{ session("erro") }}
+            </div>
+        @endif
+        <br/>
         <form action="/cadastro-aluno" method="post">
             @csrf
             <div class="form-row">
@@ -63,7 +74,7 @@
                 </div>
                 <div class="form-group col-2">
                     <label> Imagem do aluno : </label>
-                    <input type="file" name="imagem" accept="image/*">
+                    <input type="file" name="foto" accept="image/*">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary"> Salvar </button>

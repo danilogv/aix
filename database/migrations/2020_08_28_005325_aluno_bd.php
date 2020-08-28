@@ -9,12 +9,14 @@ class AlunoBd extends Migration
     public function up()
     {
         Schema::create("aluno", function (Blueprint $table) {
-            $table->char("id", 36)->primary();
+            $table->increments("id");
             $table->string("nome", 100)->nullable(false);
             $table->integer("matricula")->unique()->nullable(false);
             $table->enum("situacao", ['ativo', 'inativo'])->default('inativo')->nullable(false);
             $table->string("endereco", 255)->nullable(false);
-            $table->char("curso_id", 36); 
+            $table->binary("foto")->nullable(false);
+            $table->integer("curso_id")->unsigned();
+            $table->unique(['nome', 'curso_id']);
             $table->foreign("curso_id")->references("id")->on("curso")->onDelete("cascade");
         });
     }

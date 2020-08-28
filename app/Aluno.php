@@ -8,7 +8,7 @@ class Aluno extends Model
 {
     public $timestamps = false; 
     protected $table = "aluno"; 
-    protected $fillable = ["id", "nome", "matricula", "situacao", "endereco", "curso_id"];
+    protected $fillable = ["id", "nome", "matricula", "situacao", "endereco", "foto", "curso_id"];
 
     public function curso(){
         return $this->belongsTo(Curso::class); 

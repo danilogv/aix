@@ -9,7 +9,7 @@ class CursoBd extends Migration
     public function up()
     {
         Schema::create("curso", function (Blueprint $table) {
-            $table->char("id", 36)->primary();
+            $table->increments("id");
             $table->string("nome", 100)->unique()->nullable(false);
         });
     }
