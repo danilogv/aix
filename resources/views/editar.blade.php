@@ -30,6 +30,9 @@
         <br/> <br/>
         <form action="/alterar" method="post">
             @csrf
+            <div style="text-align:center; padding: 5px">
+                <img src="data:image/png;base64,<?= base64_encode($aluno->foto) ?>" width="100" height="100" />
+            </div>
             <div class="form-row">
                 <div class="form-group col-3">
                     <label> Nome : </label>

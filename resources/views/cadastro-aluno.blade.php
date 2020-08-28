@@ -74,7 +74,7 @@
                 </div>
                 <div class="form-group col-2">
                     <label> Imagem do aluno : </label>
-                    <input type="file" name="foto" accept="image/*">
+                    <input type="file" name="foto" accept="image/png">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary"> Salvar </button>
