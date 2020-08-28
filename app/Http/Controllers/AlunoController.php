@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Aluno;
 use App\Curso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Exception;
 
 class AlunoController extends Controller
@@ -86,7 +87,7 @@ class AlunoController extends Controller
     }
 
     public function listagem() {
-        $alunos = Aluno::all();
+        $alunos = DB::table('aluno')->paginate();
         return view("listagem", ["alunos" => $alunos]);
     }
 

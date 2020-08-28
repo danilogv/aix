@@ -40,6 +40,8 @@
             @foreach ($alunos as $aluno)
                 <a href="/editar/{{$aluno->id}}" class="list-group-item list-group-item-action"> {{$aluno->nome}} </a>
             @endforeach
+            <br/> <br/>
+            {{$alunos->render()}}
         </div>
     </body>
 </html>
