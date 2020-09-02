@@ -23,7 +23,6 @@ class LoginBd extends Migration
     {
         DB::table("login")->delete(2); 
         DB::table("login")->delete(1);
-        DB::table("login")->insert(['email' => "danilo@hotmail.com", "senha" => '$2y$10$/3dzwSXgvGoGOifg8.RNj..46iEf8L7Dc5apd960o8s4FH5aJxAnm']); //123
         Schema::dropIfExists("login");
     }
 }
